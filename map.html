@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+    <style>
+        #map {
+            width: 1900px; 
+            height: 700px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px solid;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+<body>
+    <h1>Top 10 BucketList Places I would want to visit</h1>  
+    <div id="map"></div>
+</body>
+    <script>
+        var map_center = [10.3392, 123.8537];
+        var mapOptions = {
+            center: map_center,
+            zoom: 5.5
+        }
+        var map = L.map('map', mapOptions);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 12,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Locations
+        var circle = L.circle([-10.313145491699188, -75.3545665547192], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([-10.313145491699188, -75.3545665547192])
+        .setContent("1. Brazil, Peru ")
+        .addTo(map);
+
+        var circle = L.circle([35.70580209679765, 139.77558151391597], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([35.70580209679765, 139.77558151391597])
+        .setContent("2. Japan, Tokyo")
+        .addTo(map);
+
+        var circle = L.circle([40.98889620656688, -73.93391594144542], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([40.98889620656688, -73.93391594144542])
+        .setContent("3. United States, New York")
+        .addTo(map);
+
+        var circle = L.circle([26.709208917867844, 30.105042726910845], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([26.709208917867844, 30.105042726910845])
+        .setContent("4. Egypt")
+        .addTo(map);
+
+        var circle = L.circle([37.61675788429568, 127.82005194432679], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([37.61675788429568, 127.82005194432679])
+        .setContent("5. South Korea, Seoul")
+        .addTo(map);
+
+        var circle = L.circle([41.89574846256219, 12.929852225813436], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([41.89574846256219, 12.929852225813436])
+        .setContent("6. Italy, Rome")
+        .addTo(map);
+
+        var circle = L.circle([-33.507853493340974, 151.05731182901218], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([-33.507853493340974, 151.05731182901218])
+        .setContent("7. Australia, Sydney")
+        .addTo(map);
+
+        var circle = L.circle([50.57311446203278, 30.65254789152013], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([50.57311446203278, 30.65254789152013])
+        .setContent("8. Ukraine, Kyiv")
+        .addTo(map);
+
+        var circle = L.circle([51.56662713850946, -0.2023152058019331], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([51.56662713850946, -0.2023152058019331])
+        .setContent("9. United Kingdom, London")
+        .addTo(map);
+
+        var circle = L.circle([36.48511565303392, -119.41787298341009], {
+            color: 'blue',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var popup = L.popup()
+        .setLatLng([36.48511565303392, -119.41787298341009])
+        .setContent("10. United States, California")
+        .addTo(map);
+</script>
+</html>
